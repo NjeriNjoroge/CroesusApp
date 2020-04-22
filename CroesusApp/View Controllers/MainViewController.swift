@@ -101,7 +101,7 @@ class MainViewController: AloeStackViewController {
   
   var viewSummaryButton: UIButton = {
     let button = UIButton(type: .system)
-    //button.addTarget(self, action: #selector(showDetailsSummary), for: .touchUpInside)
+    button.addTarget(self, action: #selector(showDetailsSummary), for: .touchUpInside)
     button.layer.cornerRadius = 20
     button.clipsToBounds = true
     button.setTitle("Show summary", for: .normal)
@@ -179,6 +179,12 @@ class MainViewController: AloeStackViewController {
   
   fileprivate func setupButtonView() {
     stackView.addRow(viewSummaryButton)
+  }
+  
+  fileprivate func showDetailsSummary() {
+   let summaryVC = SummaryViewController()
+  
+    
   }
   
 

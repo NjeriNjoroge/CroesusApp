@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		11E65F55F370CDED9FEF5581 /* Pods_CroesusApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C44DA5E0CC35909C228C3A12 /* Pods_CroesusApp.framework */; };
 		8792726C244F375F005C46B0 /* RegionPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8792726B244F375F005C46B0 /* RegionPickerView.swift */; };
+		87927271244FE9D9005C46B0 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87927270244FE9D9005C46B0 /* SummaryViewController.swift */; };
 		879C4177244EFF01007DE604 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C4176244EFF01007DE604 /* AppDelegate.swift */; };
 		879C417B244EFF01007DE604 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C417A244EFF01007DE604 /* MainViewController.swift */; };
 		879C4180244EFF02007DE604 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879C417F244EFF02007DE604 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		8751129C244F0C0C0035F957 /* AloeStackView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AloeStackView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8792726B244F375F005C46B0 /* RegionPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionPickerView.swift; sourceTree = "<group>"; };
+		87927270244FE9D9005C46B0 /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		879C4173244EFF01007DE604 /* CroesusApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CroesusApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879C4176244EFF01007DE604 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		879C417A244EFF01007DE604 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +53,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8792726F244FE9BC005C46B0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				879C417A244EFF01007DE604 /* MainViewController.swift */,
+				87927270244FE9D9005C46B0 /* SummaryViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		879C416A244EFF01007DE604 = {
 			isa = PBXGroup;
 			children = (
@@ -72,8 +83,8 @@
 		879C4175244EFF01007DE604 /* CroesusApp */ = {
 			isa = PBXGroup;
 			children = (
+				8792726F244FE9BC005C46B0 /* View Controllers */,
 				879C418B244EFFB7007DE604 /* Views */,
-				879C417A244EFF01007DE604 /* MainViewController.swift */,
 				879C418A244EFF11007DE604 /* Support Files */,
 				879C4181244EFF02007DE604 /* LaunchScreen.storyboard */,
 				879C4184244EFF02007DE604 /* Info.plist */,
@@ -225,6 +236,7 @@
 				879C417B244EFF01007DE604 /* MainViewController.swift in Sources */,
 				8792726C244F375F005C46B0 /* RegionPickerView.swift in Sources */,
 				879C4177244EFF01007DE604 /* AppDelegate.swift in Sources */,
+				87927271244FE9D9005C46B0 /* SummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
