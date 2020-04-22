@@ -139,6 +139,7 @@ class SummaryViewController: AloeStackViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    stackView.hidesSeparatorsByDefault = true
     setupBioDetails()
   }
   
@@ -147,6 +148,39 @@ class SummaryViewController: AloeStackViewController {
     stackView.addSubview(firstNameInput)
     firstNameInput.topAnchor.constraint(equalTo: firstNameLabel.topAnchor).isActive = true
     firstNameInput.rightAnchor.constraint(equalTo: stackView.rightAnchor, constant: -24).isActive = true
+    
+    stackView.addRow(lastNameLabel)
+    stackView.addSubview(lastNameInput)
+    lastNameInput.topAnchor.constraint(equalTo: lastNameLabel.topAnchor).isActive = true
+    lastNameInput.rightAnchor.constraint(equalTo: stackView.rightAnchor, constant: -24).isActive = true
+    
+    stackView.addRow(identificationLabel)
+    stackView.addSubview(indentificationInput)
+    indentificationInput.topAnchor.constraint(equalTo: identificationLabel.topAnchor).isActive = true
+    indentificationInput.rightAnchor.constraint(equalTo: stackView.rightAnchor, constant: -24).isActive = true
+    
+    stackView.addRow(deviceTypeLabel)
+    stackView.addSubview(deviceTypeInput)
+    deviceTypeInput.topAnchor.constraint(equalTo: deviceTypeLabel.topAnchor).isActive = true
+    deviceTypeInput.rightAnchor.constraint(equalTo: stackView.rightAnchor, constant: -24).isActive = true
+    
+    stackView.addRow(regionLabel)
+    stackView.addSubview(regioneInput)
+    regioneInput.topAnchor.constraint(equalTo: regionLabel.topAnchor).isActive = true
+    regioneInput.rightAnchor.constraint(equalTo: stackView.rightAnchor, constant: -24).isActive = true
+    
+    stackView.addRow(deviceTypeLabel)
+    stackView.addSubview(deviceTypeInput)
+    deviceTypeInput.topAnchor.constraint(equalTo: deviceTypeLabel.topAnchor).isActive = true
+    deviceTypeInput.rightAnchor.constraint(equalTo: stackView.rightAnchor, constant: -24).isActive = true
+    
+    stackView.addRow(photoLabel)
+    stackView.addRow(photoImageView)
+    stackView.addRow(updateButton)
+    stackView.addRow(saveButton)
+
+    
+    
   }
 
 

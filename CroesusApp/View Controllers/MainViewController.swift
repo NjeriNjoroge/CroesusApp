@@ -181,9 +181,9 @@ class MainViewController: AloeStackViewController {
     stackView.addRow(viewSummaryButton)
   }
   
-  fileprivate func showDetailsSummary() {
+  @objc fileprivate func showDetailsSummary() {
    let summaryVC = SummaryViewController()
-  
+   navigationController?.pushViewController(summaryVC, animated: true)
     
   }
   
