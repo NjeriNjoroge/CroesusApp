@@ -3,28 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		11E65F55F370CDED9FEF5581 /* Pods_CroesusApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C44DA5E0CC35909C228C3A12 /* Pods_CroesusApp.framework */; };
+		8792726C244F375F005C46B0 /* RegionPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8792726B244F375F005C46B0 /* RegionPickerView.swift */; };
 		879C4177244EFF01007DE604 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C4176244EFF01007DE604 /* AppDelegate.swift */; };
-		879C417B244EFF01007DE604 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C417A244EFF01007DE604 /* ViewController.swift */; };
-		879C417E244EFF01007DE604 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879C417C244EFF01007DE604 /* Main.storyboard */; };
+		879C417B244EFF01007DE604 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C417A244EFF01007DE604 /* MainViewController.swift */; };
 		879C4180244EFF02007DE604 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879C417F244EFF02007DE604 /* Assets.xcassets */; };
 		879C4183244EFF02007DE604 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879C4181244EFF02007DE604 /* LaunchScreen.storyboard */; };
-		879C418D244EFFD4007DE604 /* DataCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C418C244EFFD4007DE604 /* DataCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8751129C244F0C0C0035F957 /* AloeStackView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AloeStackView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8792726B244F375F005C46B0 /* RegionPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionPickerView.swift; sourceTree = "<group>"; };
 		879C4173244EFF01007DE604 /* CroesusApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CroesusApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879C4176244EFF01007DE604 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		879C417A244EFF01007DE604 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		879C417D244EFF01007DE604 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		879C417A244EFF01007DE604 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		879C417F244EFF02007DE604 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		879C4182244EFF02007DE604 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		879C4184244EFF02007DE604 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		879C418C244EFFD4007DE604 /* DataCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCollectionView.swift; sourceTree = "<group>"; };
+		879C418E244F0B53007DE604 /* AloeStackView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AloeStackView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C46AF63140F661FC0BFB2F0 /* Pods-CroesusApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CroesusApp.release.xcconfig"; path = "Target Support Files/Pods-CroesusApp/Pods-CroesusApp.release.xcconfig"; sourceTree = "<group>"; };
 		B2923A95E4EAC3CAF2E3010A /* Pods-CroesusApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CroesusApp.debug.xcconfig"; path = "Target Support Files/Pods-CroesusApp/Pods-CroesusApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C44DA5E0CC35909C228C3A12 /* Pods_CroesusApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CroesusApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,7 +48,6 @@
 				B2923A95E4EAC3CAF2E3010A /* Pods-CroesusApp.debug.xcconfig */,
 				9C46AF63140F661FC0BFB2F0 /* Pods-CroesusApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -74,9 +73,8 @@
 			isa = PBXGroup;
 			children = (
 				879C418B244EFFB7007DE604 /* Views */,
-				879C417A244EFF01007DE604 /* ViewController.swift */,
+				879C417A244EFF01007DE604 /* MainViewController.swift */,
 				879C418A244EFF11007DE604 /* Support Files */,
-				879C417C244EFF01007DE604 /* Main.storyboard */,
 				879C4181244EFF02007DE604 /* LaunchScreen.storyboard */,
 				879C4184244EFF02007DE604 /* Info.plist */,
 			);
@@ -95,7 +93,7 @@
 		879C418B244EFFB7007DE604 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				879C418C244EFFD4007DE604 /* DataCollectionView.swift */,
+				8792726B244F375F005C46B0 /* RegionPickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -103,6 +101,8 @@
 		A12699B4188E19C074C76DF5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8751129C244F0C0C0035F957 /* AloeStackView.framework */,
+				879C418E244F0B53007DE604 /* AloeStackView.framework */,
 				C44DA5E0CC35909C228C3A12 /* Pods_CroesusApp.framework */,
 			);
 			name = Frameworks;
@@ -170,7 +170,6 @@
 			files = (
 				879C4183244EFF02007DE604 /* LaunchScreen.storyboard in Resources */,
 				879C4180244EFF02007DE604 /* Assets.xcassets in Resources */,
-				879C417E244EFF01007DE604 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,8 +222,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				879C418D244EFFD4007DE604 /* DataCollectionView.swift in Sources */,
-				879C417B244EFF01007DE604 /* ViewController.swift in Sources */,
+				879C417B244EFF01007DE604 /* MainViewController.swift in Sources */,
+				8792726C244F375F005C46B0 /* RegionPickerView.swift in Sources */,
 				879C4177244EFF01007DE604 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,14 +231,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		879C417C244EFF01007DE604 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				879C417D244EFF01007DE604 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		879C4181244EFF02007DE604 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

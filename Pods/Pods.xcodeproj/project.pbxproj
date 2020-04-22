@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		5BAA4C1963D8222CF6EA0429954A6E72 /* AloeStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB31B7F2A9CB2861192FE173132EDE1 /* AloeStackViewController.swift */; };
 		5EC2BB6E6629008C341F494055C265A5 /* Tappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E66A27E11B99BB5F0C7ADF5798788A3 /* Tappable.swift */; };
 		77619C5BF4E5B0DC56774875F3C4C2D2 /* StackViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760A1261321624A970978B947F28EDD0 /* StackViewCell.swift */; };
+		8700A027244F208900D438C1 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 9D940727FF8FB9C785EB98E56350EF41 /* Podfile */; };
+		8700A028244F208900D438C1 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 9D940727FF8FB9C785EB98E56350EF41 /* Podfile */; };
 		97CC39C5E0E4C80B8F4CB88EA756D4BB /* AloeStackView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 85098E21C2C0B525BE1CF719630078D3 /* AloeStackView-dummy.m */; };
 		A02E40710845F5A2F9722937C0A73943 /* AloeStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F40719C8C4005D0E7D03D1DE75DCC8 /* AloeStackView.swift */; };
 		C724A467C08941E88DA0FAB836C27403 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
@@ -46,8 +48,8 @@
 		85098E21C2C0B525BE1CF719630078D3 /* AloeStackView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AloeStackView-dummy.m"; sourceTree = "<group>"; };
 		8DB31B7F2A9CB2861192FE173132EDE1 /* AloeStackViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AloeStackViewController.swift; path = Sources/AloeStackView/AloeStackViewController.swift; sourceTree = "<group>"; };
 		919FADA27BCF9F3D2F89024B3CF0DB21 /* AloeStackView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AloeStackView-Info.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A456CA48979F87470244D9AA3B0E4EAC /* AloeStackView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AloeStackView.framework; path = AloeStackView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A456CA48979F87470244D9AA3B0E4EAC /* AloeStackView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AloeStackView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8F40719C8C4005D0E7D03D1DE75DCC8 /* AloeStackView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AloeStackView.swift; path = Sources/AloeStackView/AloeStackView.swift; sourceTree = "<group>"; };
 		B3B4CBE33615DF363851ABBBB7430BFC /* Highlightable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Highlightable.swift; path = Sources/AloeStackView/Protocols/Highlightable.swift; sourceTree = "<group>"; };
 		B4CFADEAFF6DE042214107FA688AE22A /* SeparatorHiding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SeparatorHiding.swift; path = Sources/AloeStackView/Protocols/SeparatorHiding.swift; sourceTree = "<group>"; };
@@ -55,7 +57,7 @@
 		BE6846ABAE2AA5F1ED7851C23ED30FE4 /* AloeStackView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AloeStackView.modulemap; sourceTree = "<group>"; };
 		CEB523070C29A8B8AB609F643C45D433 /* Pods-CroesusApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CroesusApp.release.xcconfig"; sourceTree = "<group>"; };
 		D99450E64DB3D091BCFC972AE43F0C0B /* Pods-CroesusApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CroesusApp-Info.plist"; sourceTree = "<group>"; };
-		DACE91604DC82869CA94072670635C1F /* Pods_CroesusApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CroesusApp.framework; path = "Pods-CroesusApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DACE91604DC82869CA94072670635C1F /* Pods_CroesusApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CroesusApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBBBE5F342D8141DC651F5B83F11B818 /* SeparatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SeparatorView.swift; path = Sources/AloeStackView/Views/SeparatorView.swift; sourceTree = "<group>"; };
 		DD31BE2EEA962D7D32179014A2C34D15 /* AloeStackView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AloeStackView-prefix.pch"; sourceTree = "<group>"; };
 		EB87603E2511ABDC68E587FD655A32A3 /* Pods-CroesusApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CroesusApp-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -176,7 +178,6 @@
 				0E66A27E11B99BB5F0C7ADF5798788A3 /* Tappable.swift */,
 				C8361F1D432FC0F40FA9D16FDBA5A284 /* Support Files */,
 			);
-			name = AloeStackView;
 			path = AloeStackView;
 			sourceTree = "<group>";
 		};
@@ -249,7 +250,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -272,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8700A027244F208900D438C1 /* Podfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8700A028244F208900D438C1 /* Podfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,7 +377,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/AloeStackView/AloeStackView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/AloeStackView/AloeStackView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -474,7 +477,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/AloeStackView/AloeStackView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/AloeStackView/AloeStackView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
