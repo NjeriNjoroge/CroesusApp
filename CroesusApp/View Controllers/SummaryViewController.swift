@@ -8,6 +8,7 @@
 
 import UIKit
 import AloeStackView
+import CoreData
 
 //firstname:
 //lastname:
@@ -22,7 +23,7 @@ class SummaryViewController: AloeStackViewController {
   init(firstName: String, lastName: String, id: String, region: String, photo: UIImage) {
     self.firstNameInput.text = firstName
     self.lastNameInput.text = lastName
-    self.indentificationInput.text = id
+    self.identificationInput.text = id
     self.regioneInput.text = region
     self.photoImageView.image = photo
     super.init()
@@ -72,7 +73,7 @@ class SummaryViewController: AloeStackViewController {
     return label
   }()
   
-  var indentificationInput: UILabel = {
+  var identificationInput: UILabel = {
     let label = UILabel()
     label.text = "1234567"
     label.translatesAutoresizingMaskIntoConstraints = false
@@ -172,9 +173,9 @@ class SummaryViewController: AloeStackViewController {
     lastNameInput.rightAnchor.constraint(equalTo: stackView.rightAnchor, constant: -24).isActive = true
     
     stackView.addRow(identificationLabel)
-    stackView.addSubview(indentificationInput)
-    indentificationInput.topAnchor.constraint(equalTo: identificationLabel.topAnchor).isActive = true
-    indentificationInput.rightAnchor.constraint(equalTo: stackView.rightAnchor, constant: -24).isActive = true
+    stackView.addSubview(identificationInput)
+    identificationInput.topAnchor.constraint(equalTo: identificationLabel.topAnchor).isActive = true
+    identificationInput.rightAnchor.constraint(equalTo: stackView.rightAnchor, constant: -24).isActive = true
     
     stackView.addRow(deviceTypeLabel)
     stackView.addSubview(deviceTypeInput)
@@ -203,6 +204,29 @@ class SummaryViewController: AloeStackViewController {
   
   @objc fileprivate func sendToDatabase() {
     
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let context = appDelegate.persistentContainer.viewContext
+    let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
+    let newUser = NSManagedObject(entity: entity!, insertInto: context)
+    
+    //add the data
+    guard let firstName = firstNameInput.text else { return }
+    guard let lastName = lastNameInput.text else { return }
+    guard let id = identificationInput.text else { return }
+    guard let region = regioneInput.text else { return }
+    guard let photo = photoImageView.image else { return }
+    let fullNames = firstName + lastName
+    newUser.setValue(fullNames, forKey: "name")
+    newUser.setValue(id, forKey: "id")
+    newUser.setValue("\(photo)", forKey: "photo")
+    newUser.setValue(region, forKey: "region")
+    
+    //save data to core data
+    do {
+       try context.save()
+      } catch {
+       print("Failed saving to core data")
+    }
   }
 
 
