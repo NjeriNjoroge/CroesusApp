@@ -143,7 +143,7 @@ class SummaryViewController: AloeStackViewController {
   
   var saveButton: UIButton = {
     let button = UIButton(type: .system)
-    button.addTarget(self, action: #selector(sendToDatabase), for: .touchUpInside)
+    button.addTarget(self, action: #selector(sendToServer), for: .touchUpInside)
     button.layer.cornerRadius = 20
     button.clipsToBounds = true
     button.setTitle("Save", for: .normal)
@@ -203,15 +203,26 @@ class SummaryViewController: AloeStackViewController {
     navigationController?.popViewController(animated: true)
   }
   
-  @objc fileprivate func sendToDatabase() {
-    
+  @objc fileprivate func sendToServer() {
     checkIfConnectivityIsAvailable()
-    
+  }
+  
+  //if there is connectivity we make the next call to send to a server
+  fileprivate func checkIfConnectivityIsAvailable() {
+    if Connectivity.isConnectedToInternet(){
+      print("connected to internet")
+      //do the network call
+    } else {
+      sendToDatabase()
+    }
+  }
+  
+  fileprivate func sendToDatabase() {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let context = appDelegate.persistentContainer.viewContext
     let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
     let newUser = NSManagedObject(entity: entity!, insertInto: context)
-    
+
     //add the data
     guard let firstName = firstNameInput.text else { return }
     guard let lastName = lastNameInput.text else { return }
@@ -223,18 +234,13 @@ class SummaryViewController: AloeStackViewController {
     newUser.setValue(id, forKey: "id")
     newUser.setValue("\(photo)", forKey: "photo")
     newUser.setValue(region, forKey: "region")
-    
+
     //save data to core data
     do {
        try context.save()
       } catch {
        print("Failed saving to core data")
     }
-  }
-  
-  //if there is connectivity we make the next call to send to a server
-  fileprivate func checkIfConnectivityIsAvailable() {
-    
   }
 
 
