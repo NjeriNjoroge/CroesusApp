@@ -129,7 +129,7 @@ class SummaryViewController: AloeStackViewController {
   
   var updateButton: UIButton = {
     let button = UIButton(type: .system)
-    //button.addTarget(self, action: #selector(showDetailsSummary), for: .touchUpInside)
+    button.addTarget(self, action: #selector(showMainVC), for: .touchUpInside)
     button.layer.cornerRadius = 20
     button.clipsToBounds = true
     button.setTitle("Update info", for: .normal)
@@ -153,6 +153,8 @@ class SummaryViewController: AloeStackViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    //hide the back button
+    self.navigationItem.hidesBackButton = true
     stackView.hidesSeparatorsByDefault = true
     setupBioDetails()
   }
@@ -192,7 +194,10 @@ class SummaryViewController: AloeStackViewController {
     stackView.addRow(photoImageView)
     stackView.addRow(updateButton)
     stackView.addRow(saveButton)
-
+  }
+  
+  @objc fileprivate func showMainVC() {
+    navigationController?.popViewController(animated: true)
   }
 
 

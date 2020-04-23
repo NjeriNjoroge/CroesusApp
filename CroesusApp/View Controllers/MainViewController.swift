@@ -223,7 +223,7 @@ class MainViewController: AloeStackViewController {
     }
     let summaryVC = SummaryViewController(firstName: firstName, lastName: lastName, id: idInput, region: region, photo: passportImage)
     navigationController?.pushViewController(summaryVC, animated: true)
-    //hide the back button
+    
   }
   
   func showDatePicker() {
