@@ -124,7 +124,7 @@ class MainViewController: AloeStackViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    navigationItem.title = "Fill in your details"
   }
   
   override func loadView() {

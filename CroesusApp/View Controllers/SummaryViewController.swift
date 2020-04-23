@@ -141,7 +141,7 @@ class SummaryViewController: AloeStackViewController {
   
   var saveButton: UIButton = {
     let button = UIButton(type: .system)
-    //button.addTarget(self, action: #selector(showDetailsSummary), for: .touchUpInside)
+    button.addTarget(self, action: #selector(sendToDatabase), for: .touchUpInside)
     button.layer.cornerRadius = 20
     button.clipsToBounds = true
     button.setTitle("Save", for: .normal)
@@ -155,6 +155,7 @@ class SummaryViewController: AloeStackViewController {
     super.viewDidLoad()
     //hide the back button
     self.navigationItem.hidesBackButton = true
+    navigationItem.title = "Confirm your details"
     stackView.hidesSeparatorsByDefault = true
     setupBioDetails()
   }
@@ -198,6 +199,10 @@ class SummaryViewController: AloeStackViewController {
   
   @objc fileprivate func showMainVC() {
     navigationController?.popViewController(animated: true)
+  }
+  
+  fileprivate func sendToDatabase() {
+    
   }
 
 
