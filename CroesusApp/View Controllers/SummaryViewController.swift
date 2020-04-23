@@ -19,6 +19,19 @@ import AloeStackView
 
 class SummaryViewController: AloeStackViewController {
   
+  init(firstName: String, lastName: String, id: String, region: String, photo: UIImage) {
+    self.firstNameInput.text = firstName
+    self.lastNameInput.text = lastName
+    self.indentificationInput.text = id
+    self.regioneInput.text = region
+    self.photoImageView.image = photo
+    super.init()
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
   var firstNameLabel: UILabel = {
     let label = UILabel()
     label.text = "Firstname:"
@@ -77,7 +90,7 @@ class SummaryViewController: AloeStackViewController {
   
   var deviceTypeInput: UILabel = {
     let label = UILabel()
-    label.text = "Firstname"
+    label.text = "\(UIDevice.current.model)"
     label.translatesAutoresizingMaskIntoConstraints = false
     label.textColor = .lightGray
     return label
@@ -110,6 +123,7 @@ class SummaryViewController: AloeStackViewController {
   var photoImageView: UIImageView = {
     let imgView = UIImageView()
     imgView.translatesAutoresizingMaskIntoConstraints = false
+    imgView.contentMode = .scaleAspectFit
     return imgView
   }()
   
@@ -179,8 +193,6 @@ class SummaryViewController: AloeStackViewController {
     stackView.addRow(updateButton)
     stackView.addRow(saveButton)
 
-    
-    
   }
 
 
