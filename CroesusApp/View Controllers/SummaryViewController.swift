@@ -201,7 +201,7 @@ class SummaryViewController: AloeStackViewController {
     navigationController?.popViewController(animated: true)
   }
   
-  fileprivate func sendToDatabase() {
+  @objc fileprivate func sendToDatabase() {
     
   }
 
