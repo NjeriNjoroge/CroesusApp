@@ -9,6 +9,7 @@
 import UIKit
 import AloeStackView
 import CoreData
+import Alamofire
 
 //firstname:
 //lastname:
@@ -204,6 +205,8 @@ class SummaryViewController: AloeStackViewController {
   
   @objc fileprivate func sendToDatabase() {
     
+    checkIfConnectivityIsAvailable()
+    
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let context = appDelegate.persistentContainer.viewContext
     let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
@@ -227,6 +230,11 @@ class SummaryViewController: AloeStackViewController {
       } catch {
        print("Failed saving to core data")
     }
+  }
+  
+  //if there is connectivity we make the next call to send to a server
+  fileprivate func checkIfConnectivityIsAvailable() {
+    
   }
 
 

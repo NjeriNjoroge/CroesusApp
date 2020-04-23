@@ -6,5 +6,6 @@ target 'CroesusApp' do
   use_frameworks!
 
 pod 'AloeStackView'
+pod 'Alamofire', '~> 5.0.0-beta.5'
 
 end
