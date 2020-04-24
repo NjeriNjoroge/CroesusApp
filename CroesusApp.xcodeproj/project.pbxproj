@@ -19,7 +19,18 @@
 		879CAF602451D60C003FE219 /* ConnectivityChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879CAF5F2451D60C003FE219 /* ConnectivityChecker.swift */; };
 		879CAF622452AC0D003FE219 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879CAF612452AC0D003FE219 /* TabBarController.swift */; };
 		879CAF642452AC54003FE219 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879CAF632452AC54003FE219 /* SurveyViewController.swift */; };
+		879CAF6C2452BC4C003FE219 /* CroesusAppUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879CAF6B2452BC4C003FE219 /* CroesusAppUnitTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		879CAF6E2452BC4C003FE219 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 879C416B244EFF01007DE604 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 879C4172244EFF01007DE604;
+			remoteInfo = CroesusApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8751129C244F0C0C0035F957 /* AloeStackView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AloeStackView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +48,9 @@
 		879CAF5F2451D60C003FE219 /* ConnectivityChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityChecker.swift; sourceTree = "<group>"; };
 		879CAF612452AC0D003FE219 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		879CAF632452AC54003FE219 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
+		879CAF692452BC4C003FE219 /* CroesusAppUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CroesusAppUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		879CAF6B2452BC4C003FE219 /* CroesusAppUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CroesusAppUnitTests.swift; sourceTree = "<group>"; };
+		879CAF6D2452BC4C003FE219 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C46AF63140F661FC0BFB2F0 /* Pods-CroesusApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CroesusApp.release.xcconfig"; path = "Target Support Files/Pods-CroesusApp/Pods-CroesusApp.release.xcconfig"; sourceTree = "<group>"; };
 		B2923A95E4EAC3CAF2E3010A /* Pods-CroesusApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CroesusApp.debug.xcconfig"; path = "Target Support Files/Pods-CroesusApp/Pods-CroesusApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C44DA5E0CC35909C228C3A12 /* Pods_CroesusApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CroesusApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +62,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				11E65F55F370CDED9FEF5581 /* Pods_CroesusApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		879CAF662452BC4C003FE219 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				879C4175244EFF01007DE604 /* CroesusApp */,
+				879CAF6A2452BC4C003FE219 /* CroesusAppUnitTests */,
 				879C4174244EFF01007DE604 /* Products */,
 				7C0C284604B29A90C8C681C2 /* Pods */,
 				A12699B4188E19C074C76DF5 /* Frameworks */,
@@ -88,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				879C4173244EFF01007DE604 /* CroesusApp.app */,
+				879CAF692452BC4C003FE219 /* CroesusAppUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,6 +155,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		879CAF6A2452BC4C003FE219 /* CroesusAppUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				879CAF6B2452BC4C003FE219 /* CroesusAppUnitTests.swift */,
+				879CAF6D2452BC4C003FE219 /* Info.plist */,
+			);
+			path = CroesusAppUnitTests;
+			sourceTree = "<group>";
+		};
 		A12699B4188E19C074C76DF5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +196,24 @@
 			productReference = 879C4173244EFF01007DE604 /* CroesusApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		879CAF682452BC4C003FE219 /* CroesusAppUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 879CAF702452BC4C003FE219 /* Build configuration list for PBXNativeTarget "CroesusAppUnitTests" */;
+			buildPhases = (
+				879CAF652452BC4C003FE219 /* Sources */,
+				879CAF662452BC4C003FE219 /* Frameworks */,
+				879CAF672452BC4C003FE219 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				879CAF6F2452BC4C003FE219 /* PBXTargetDependency */,
+			);
+			name = CroesusAppUnitTests;
+			productName = CroesusAppUnitTests;
+			productReference = 879CAF692452BC4C003FE219 /* CroesusAppUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -176,6 +226,10 @@
 				TargetAttributes = {
 					879C4172244EFF01007DE604 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					879CAF682452BC4C003FE219 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 879C4172244EFF01007DE604;
 					};
 				};
 			};
@@ -193,6 +247,7 @@
 			projectRoot = "";
 			targets = (
 				879C4172244EFF01007DE604 /* CroesusApp */,
+				879CAF682452BC4C003FE219 /* CroesusAppUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -204,6 +259,13 @@
 			files = (
 				879C4183244EFF02007DE604 /* LaunchScreen.storyboard in Resources */,
 				879C4180244EFF02007DE604 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		879CAF672452BC4C003FE219 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +330,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		879CAF652452BC4C003FE219 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				879CAF6C2452BC4C003FE219 /* CroesusAppUnitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		879CAF6F2452BC4C003FE219 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 879C4172244EFF01007DE604 /* CroesusApp */;
+			targetProxy = 879CAF6E2452BC4C003FE219 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		879C4181244EFF02007DE604 /* LaunchScreen.storyboard */ = {
@@ -432,6 +510,44 @@
 			};
 			name = Release;
 		};
+		879CAF712452BC4C003FE219 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CroesusAppUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.njoroge.CroesusAppUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CroesusApp.app/CroesusApp";
+			};
+			name = Debug;
+		};
+		879CAF722452BC4C003FE219 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CroesusAppUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.njoroge.CroesusAppUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CroesusApp.app/CroesusApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -449,6 +565,15 @@
 			buildConfigurations = (
 				879C4188244EFF02007DE604 /* Debug */,
 				879C4189244EFF02007DE604 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		879CAF702452BC4C003FE219 /* Build configuration list for PBXNativeTarget "CroesusAppUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				879CAF712452BC4C003FE219 /* Debug */,
+				879CAF722452BC4C003FE219 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

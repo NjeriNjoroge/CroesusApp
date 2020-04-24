@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window?.makeKeyAndVisible()
     window?.rootViewController = TabBarController()
     
+    checkInternetConnectivity()
+    
     return true
   }
   
@@ -61,6 +63,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
       }
     }
+  }
+  
+  fileprivate func checkInternetConnectivity() {
+    if Connectivity.isConnectedToInternet() {
+      //do the network call
+      //clear core data
+    } 
   }
 
 }

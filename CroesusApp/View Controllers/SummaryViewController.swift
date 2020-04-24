@@ -222,6 +222,9 @@ class SummaryViewController: AloeStackViewController {
     //save data to core data
     do {
        try context.save()
+        print("saved to CORE DATA")
+      //clear the data in both VCs
+      
       } catch {
        print("Failed saving to core data")
     }
