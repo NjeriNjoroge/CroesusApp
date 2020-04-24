@@ -85,14 +85,13 @@ class MainViewController: AloeStackViewController {
     view.translatesAutoresizingMaskIntoConstraints = false
     view.layer.borderWidth = 1
     view.layer.borderColor = UIColor.black.cgColor
-    //view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(presentCameraSheet)))
     view.layer.cornerRadius = 7
     view.clipsToBounds = true
     return view
   }()
   
   var addImageButton: UIButton = {
-    let button = UIButton()
+    let button = UIButton(type: .system)
     button.translatesAutoresizingMaskIntoConstraints = false
     button.setImage(UIImage(named: "plusImage"), for: .normal)
     button.addTarget(self, action: #selector(presentCameraSheet), for: .touchUpInside)
@@ -158,7 +157,6 @@ class MainViewController: AloeStackViewController {
 
     toolBar.barStyle = UIBarStyle.default
     toolBar.isTranslucent = true
-    toolBar.tintColor = UIColor.lightGray
     toolBar.sizeToFit()
     
     let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneClick))
@@ -176,11 +174,11 @@ class MainViewController: AloeStackViewController {
   fileprivate func setupImageView() {
     stackView.addRows([addImageLabel, addImageView, passportPhotoImageView])
     addImageView.heightAnchor.constraint(equalToConstant: 135).isActive = true
-    addImageView.addSubview(addImageButton)
-    NSLayoutConstraint.activate([
-      addImageButton.centerXAnchor.constraint(equalTo: addImageView.centerXAnchor),
-      addImageButton.centerYAnchor.constraint(equalTo: addImageView.centerYAnchor)
-    ])
+    stackView.addSubview(addImageButton)
+    addImageButton.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+    addImageButton.topAnchor.constraint(equalTo: addImageLabel.topAnchor).isActive = true
+    addImageButton.rightAnchor.constraint(equalTo: addImageLabel.rightAnchor, constant: -24).isActive = true
+
     addImageView.addSubview(passportPhotoImageView)
     NSLayoutConstraint.activate([
       passportPhotoImageView.topAnchor.constraint(equalTo: addImageView.topAnchor),
@@ -192,6 +190,7 @@ class MainViewController: AloeStackViewController {
   
   fileprivate func setupButtonView() {
     stackView.addRow(viewSummaryButton)
+    viewSummaryButton.heightAnchor.constraint(equalToConstant: 47).isActive = true
   }
   
   @objc fileprivate func showDetailsSummary() {

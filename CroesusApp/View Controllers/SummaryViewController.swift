@@ -11,14 +11,6 @@ import AloeStackView
 import CoreData
 import Alamofire
 
-//firstname:
-//lastname:
-//id/passport
-//devicetype:
-//region:
-//photo
-//update save buttons
-
 class SummaryViewController: AloeStackViewController {
   
   init(firstName: String, lastName: String, id: String, region: String, photo: UIImage) {
@@ -46,7 +38,6 @@ class SummaryViewController: AloeStackViewController {
     let label = UILabel()
     label.text = "Firstname"
     label.translatesAutoresizingMaskIntoConstraints = false
-    label.textColor = .lightGray
     return label
   }()
   
@@ -62,7 +53,6 @@ class SummaryViewController: AloeStackViewController {
     let label = UILabel()
     label.text = "Lastname"
     label.translatesAutoresizingMaskIntoConstraints = false
-    label.textColor = .lightGray
     return label
   }()
   
@@ -78,7 +68,6 @@ class SummaryViewController: AloeStackViewController {
     let label = UILabel()
     label.text = "1234567"
     label.translatesAutoresizingMaskIntoConstraints = false
-    label.textColor = .lightGray
     return label
   }()
   
@@ -94,7 +83,6 @@ class SummaryViewController: AloeStackViewController {
     let label = UILabel()
     label.text = "\(UIDevice.current.model)"
     label.translatesAutoresizingMaskIntoConstraints = false
-    label.textColor = .lightGray
     return label
   }()
   
@@ -110,7 +98,6 @@ class SummaryViewController: AloeStackViewController {
     let label = UILabel()
     label.text = "Central"
     label.translatesAutoresizingMaskIntoConstraints = false
-    label.textColor = .lightGray
     return label
   }()
   
@@ -122,35 +109,21 @@ class SummaryViewController: AloeStackViewController {
     return label
   }()
   
+  var addedImageView: UIView = {
+    let view = UIView()
+    view.translatesAutoresizingMaskIntoConstraints = false
+    view.layer.borderWidth = 1
+    view.layer.borderColor = UIColor.black.cgColor
+    view.layer.cornerRadius = 7
+    view.clipsToBounds = true
+    return view
+  }()
+  
   var photoImageView: UIImageView = {
     let imgView = UIImageView()
     imgView.translatesAutoresizingMaskIntoConstraints = false
     imgView.contentMode = .scaleAspectFit
     return imgView
-  }()
-  
-  var updateButton: UIButton = {
-    let button = UIButton(type: .system)
-    button.addTarget(self, action: #selector(showMainVC), for: .touchUpInside)
-    button.layer.cornerRadius = 20
-    button.clipsToBounds = true
-    button.setTitle("Update info", for: .normal)
-    button.translatesAutoresizingMaskIntoConstraints = false
-    button.backgroundColor = .blue
-    button.tintColor = .white
-    return button
-  }()
-  
-  var saveButton: UIButton = {
-    let button = UIButton(type: .system)
-    button.addTarget(self, action: #selector(sendToServer), for: .touchUpInside)
-    button.layer.cornerRadius = 20
-    button.clipsToBounds = true
-    button.setTitle("Save", for: .normal)
-    button.translatesAutoresizingMaskIntoConstraints = false
-    button.backgroundColor = .blue
-    button.tintColor = .white
-    return button
   }()
   
   override func viewDidLoad() {
@@ -160,6 +133,11 @@ class SummaryViewController: AloeStackViewController {
     navigationItem.title = "Confirm your details"
     stackView.hidesSeparatorsByDefault = true
     setupBioDetails()
+  }
+  
+  override func loadView() {
+    super.loadView()
+    addButtonsToNavBar()
   }
   
   fileprivate func setupBioDetails() {
@@ -194,9 +172,15 @@ class SummaryViewController: AloeStackViewController {
     deviceTypeInput.rightAnchor.constraint(equalTo: stackView.rightAnchor, constant: -24).isActive = true
     
     stackView.addRow(photoLabel)
-    stackView.addRow(photoImageView)
-    stackView.addRow(updateButton)
-    stackView.addRow(saveButton)
+    stackView.addRow(addedImageView)
+    addedImageView.heightAnchor.constraint(equalToConstant: 135).isActive = true
+    addedImageView.addSubview(photoImageView)
+    NSLayoutConstraint.activate([
+      photoImageView.topAnchor.constraint(equalTo: addedImageView.topAnchor),
+      photoImageView.leadingAnchor.constraint(equalTo: addedImageView.leadingAnchor),
+      photoImageView.trailingAnchor.constraint(equalTo: addedImageView.trailingAnchor),
+      photoImageView.bottomAnchor.constraint(equalTo: addedImageView.bottomAnchor)
+    ])
   }
   
   @objc fileprivate func showMainVC() {
@@ -207,7 +191,7 @@ class SummaryViewController: AloeStackViewController {
     checkIfConnectivityIsAvailable()
   }
   
-  //if there is connectivity we make the next call to send to a server
+  //if there is connectivity we make the network call to send to a server
   fileprivate func checkIfConnectivityIsAvailable() {
     if Connectivity.isConnectedToInternet(){
       print("connected to internet")
@@ -241,6 +225,11 @@ class SummaryViewController: AloeStackViewController {
       } catch {
        print("Failed saving to core data")
     }
+  }
+  
+  fileprivate func addButtonsToNavBar() {
+    navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(showMainVC))
+    navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(sendToServer))
   }
 
 

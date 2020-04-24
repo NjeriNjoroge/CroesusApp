@@ -17,6 +17,8 @@
 		879CAF5A24519D53003FE219 /* BasicErrorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879CAF5924519D53003FE219 /* BasicErrorPresenter.swift */; };
 		879CAF5D2451A3A5003FE219 /* CroesusAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 879CAF5B2451A3A5003FE219 /* CroesusAppModel.xcdatamodeld */; };
 		879CAF602451D60C003FE219 /* ConnectivityChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879CAF5F2451D60C003FE219 /* ConnectivityChecker.swift */; };
+		879CAF622452AC0D003FE219 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879CAF612452AC0D003FE219 /* TabBarController.swift */; };
+		879CAF642452AC54003FE219 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879CAF632452AC54003FE219 /* SurveyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		879CAF5924519D53003FE219 /* BasicErrorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicErrorPresenter.swift; sourceTree = "<group>"; };
 		879CAF5C2451A3A5003FE219 /* CroesusAppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CroesusAppModel.xcdatamodel; sourceTree = "<group>"; };
 		879CAF5F2451D60C003FE219 /* ConnectivityChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityChecker.swift; sourceTree = "<group>"; };
+		879CAF612452AC0D003FE219 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		879CAF632452AC54003FE219 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		9C46AF63140F661FC0BFB2F0 /* Pods-CroesusApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CroesusApp.release.xcconfig"; path = "Target Support Files/Pods-CroesusApp/Pods-CroesusApp.release.xcconfig"; sourceTree = "<group>"; };
 		B2923A95E4EAC3CAF2E3010A /* Pods-CroesusApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CroesusApp.debug.xcconfig"; path = "Target Support Files/Pods-CroesusApp/Pods-CroesusApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C44DA5E0CC35909C228C3A12 /* Pods_CroesusApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CroesusApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +68,8 @@
 			children = (
 				879C417A244EFF01007DE604 /* MainViewController.swift */,
 				87927270244FE9D9005C46B0 /* SummaryViewController.swift */,
+				879CAF612452AC0D003FE219 /* TabBarController.swift */,
+				879CAF632452AC54003FE219 /* SurveyViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -251,11 +257,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				879C417B244EFF01007DE604 /* MainViewController.swift in Sources */,
+				879CAF622452AC0D003FE219 /* TabBarController.swift in Sources */,
 				879CAF602451D60C003FE219 /* ConnectivityChecker.swift in Sources */,
 				8792726C244F375F005C46B0 /* RegionPickerView.swift in Sources */,
 				879C4177244EFF01007DE604 /* AppDelegate.swift in Sources */,
 				87927271244FE9D9005C46B0 /* SummaryViewController.swift in Sources */,
 				879CAF5D2451A3A5003FE219 /* CroesusAppModel.xcdatamodeld in Sources */,
+				879CAF642452AC54003FE219 /* SurveyViewController.swift in Sources */,
 				879CAF5A24519D53003FE219 /* BasicErrorPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
