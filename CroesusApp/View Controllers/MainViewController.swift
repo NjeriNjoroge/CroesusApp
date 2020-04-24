@@ -321,3 +321,14 @@ extension MainViewController: UIImagePickerControllerDelegate, UINavigationContr
     dismiss(animated: true, completion: nil)
   }
 }
+
+extension MainViewController: ClearDataDelegate {
+  func clearMainVcData() {
+    //clear data fields
+    firstNameTF.text = ""
+    lastNameTF.text = ""
+    idFieldTF.text = ""
+    passportExpiryTF.text = ""
+    passportPhotoImageView.image = nil
+  }
+}

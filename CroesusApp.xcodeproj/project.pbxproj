@@ -20,6 +20,7 @@
 		879CAF622452AC0D003FE219 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879CAF612452AC0D003FE219 /* TabBarController.swift */; };
 		879CAF642452AC54003FE219 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879CAF632452AC54003FE219 /* SurveyViewController.swift */; };
 		879CAF6C2452BC4C003FE219 /* CroesusAppUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879CAF6B2452BC4C003FE219 /* CroesusAppUnitTests.swift */; };
+		879CAF7624537968003FE219 /* Extension+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879CAF7524537968003FE219 /* Extension+UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		879CAF692452BC4C003FE219 /* CroesusAppUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CroesusAppUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		879CAF6B2452BC4C003FE219 /* CroesusAppUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CroesusAppUnitTests.swift; sourceTree = "<group>"; };
 		879CAF6D2452BC4C003FE219 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		879CAF7524537968003FE219 /* Extension+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIImage.swift"; sourceTree = "<group>"; };
 		9C46AF63140F661FC0BFB2F0 /* Pods-CroesusApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CroesusApp.release.xcconfig"; path = "Target Support Files/Pods-CroesusApp/Pods-CroesusApp.release.xcconfig"; sourceTree = "<group>"; };
 		B2923A95E4EAC3CAF2E3010A /* Pods-CroesusApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CroesusApp.debug.xcconfig"; path = "Target Support Files/Pods-CroesusApp/Pods-CroesusApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C44DA5E0CC35909C228C3A12 /* Pods_CroesusApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CroesusApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				879CAF5F2451D60C003FE219 /* ConnectivityChecker.swift */,
+				879CAF7524537968003FE219 /* Extension+UIImage.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				879C417B244EFF01007DE604 /* MainViewController.swift in Sources */,
+				879CAF7624537968003FE219 /* Extension+UIImage.swift in Sources */,
 				879CAF622452AC0D003FE219 /* TabBarController.swift in Sources */,
 				879CAF602451D60C003FE219 /* ConnectivityChecker.swift in Sources */,
 				8792726C244F375F005C46B0 /* RegionPickerView.swift in Sources */,

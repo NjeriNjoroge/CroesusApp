@@ -11,7 +11,13 @@ import AloeStackView
 import CoreData
 import Alamofire
 
+protocol ClearDataDelegate: class {
+  func clearMainVcData()
+}
+
 class SummaryViewController: AloeStackViewController {
+  
+  weak var delegate: ClearDataDelegate?
   
   init(firstName: String, lastName: String, id: String, region: String, photo: UIImage) {
     self.firstNameInput.text = firstName
@@ -195,10 +201,12 @@ class SummaryViewController: AloeStackViewController {
   fileprivate func checkIfConnectivityIsAvailable() {
     if Connectivity.isConnectedToInternet(){
       print("connected to internet")
-      //do the network call
+      //do the network call. then clear data
     } else {
       sendToDatabase()
     }
+    navigationController?.popViewController(animated: true)
+    delegate?.clearMainVcData()
   }
   
   fileprivate func sendToDatabase() {
@@ -221,12 +229,12 @@ class SummaryViewController: AloeStackViewController {
 
     //save data to core data
     do {
-       try context.save()
-        print("saved to CORE DATA")
-      //clear the data in both VCs
-      
-      } catch {
-       print("Failed saving to core data")
+      try context.save()
+      print("saved to CORE DATA")
+      delegate?.clearMainVcData()
+    } catch {
+      print("Failed saving to core data")
+      delegate?.clearMainVcData()
     }
   }
   

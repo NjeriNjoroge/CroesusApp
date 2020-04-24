@@ -9,6 +9,11 @@
 import XCTest
 @testable import CroesusApp
 
+//check id length
+//check passport length
+//check data is saving to core data
+//check data is deleted after making call to server
+
 class CroesusAppUnitTests: XCTestCase {
   
   override func setUp() {
